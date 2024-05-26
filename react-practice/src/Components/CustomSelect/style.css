@@ -1,0 +1,28 @@
+/* CustomSelect.css */
+
+/* Style the custom-select container */
+.custom-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style the select element */
+  .custom-select select {
+    padding: 5px; /* Add padding to give space around the arrow */
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none; /* Hide the default arrow icon */
+    width: 200px; /* Set a specific width as needed */
+  }
+  
+  /* Style the custom arrow icon */
+  .custom-select select::after {
+    content: '\25BC'; /* Unicode character for a downward arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow does not interfere with interaction */
+  }
+  
