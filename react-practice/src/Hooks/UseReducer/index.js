@@ -1,12 +1,12 @@
-import { useReducer } from 'react';
+import { useReducer } from "react";
 
 function reducer(state, action) {
-  if (action.type === 'incremented_age') {
+  if (action.type === "incremented_age") {
     return {
-      age: state.age + 1
+      age: state.age + 1,
     };
   }
-  throw Error('Unknown action.');
+  throw Error("Unknown action.");
 }
 
 export default function UseReducer() {
@@ -14,9 +14,11 @@ export default function UseReducer() {
 
   return (
     <>
-      <button onClick={() => {
-        dispatch({ type: 'incremented_age' })
-      }}>
+      <button
+        onClick={() => {
+          dispatch({ type: "incremented_age" });
+        }}
+      >
         Increment age
       </button>
       <p>Hello! You are {state.age}.</p>
